@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MessageBoxComponent implements OnInit {
 
+	text = "bla";
   constructor() { }
 
   ngOnInit() {
+  }
+
+  buttonClick(){
+  	console.log("clicou");
+  	console.log("texto: " + this.text);
+  }
+
+  alterarText(event:any){
+  	//console.dir(event);
+  	this.text = event.target.value;
+  	//this.text = text;
   }
 
 }
